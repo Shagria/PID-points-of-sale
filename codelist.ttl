@@ -1,0 +1,97 @@
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://example.org/rules/> .
+@prefix voc: <http://example.org/vocabulary/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# --- POINT TYPES ---
+
+:PointTypeMapping
+  a rr:TriplesMap ;
+
+  rml:logicalSource [
+    rml:source "./consts-cs.json" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.pointsOfSaleConsts[0].pointTypes[*]"
+  ] ;
+
+  rr:subjectMap [
+    rr:template "http://example.com/pointType/{name}" ;
+    rr:class skos:Concept
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate skos:prefLabel ;
+    rr:objectMap [
+      rml:reference "desc" ;
+      rr:language "cs"
+    ]
+  ].
+
+# --- SERVICES ---
+
+:ServiceMapping
+  a rr:TriplesMap ;
+
+  rml:logicalSource [
+    rml:source "./consts-cs.json" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.pointsOfSaleConsts[1].serviceGroups[*].services[*]"
+  ] ;
+
+  rr:subjectMap [
+    rr:template "http://example.com/service/{val}" ;
+    rr:class skos:Concept
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate skos:prefLabel ;
+    rr:objectMap [
+      rml:reference "broader" ;
+      rr:language "cs"
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate skos:notation ;
+    rr:objectMap [
+      rml:reference "val" ;
+      rr:datatype xsd:integer
+    ]
+  ] ;
+  
+  rr:predicateObjectMap [
+    rr:predicate skos:note ;
+    rr:objectMap [
+      rml:reference "desc" ;
+      rr:language "cs"
+    ]
+  ].
+
+# --- PAYMENT METHODS ---
+
+:PayMethodMapping
+  a rr:TriplesMap ;
+
+  rml:logicalSource [
+    rml:source "./consts-cs.json" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.pointsOfSaleConsts[2].payMethods[*]"
+  ] ;
+
+  rr:subjectMap [
+    rr:template "http://example.com/payMethods/{val}" ;
+    rr:class skos:Concept
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate skos:prefLabel ;
+    rr:objectMap [
+      rml:reference "desc" ;
+      rr:language "cs"
+    ]
+  ].

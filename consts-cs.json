@@ -1,0 +1,151 @@
+{
+"pointsOfSaleConsts": [
+  {
+  "pointTypes": [
+    {
+      "name": "ticketMachine",
+      "desc": "automat na jízdenky"
+    },
+    {
+      "name": "ticketOfficeMetro",
+      "desc": "předprodej v metru"
+    },
+    {
+      "name": "informationCenter",
+      "desc": "infocentrum"
+    },
+    {
+      "name": "trainStation",
+      "desc": "pokladna v žel. stanici"
+    },
+    {
+      "name": "carrierOffice",
+      "desc": "kancelář dopravce"
+    },
+    {
+      "name": "chipCardDispense",
+      "desc": "výdejní místo čipových karet"
+    }
+    ]
+  },
+  {
+  "serviceGroups": [
+    {
+      "desc": "vydávání průkazek PID",
+      "services": [
+      {
+        "val": 1,
+        "desc": "sběr žádanek",
+        "broader": "vydávání průkazek PID"
+      },
+      {
+        "val": 2,
+        "desc": "vyřízení na počkání",
+        "broader": "vydávání průkazek PID"
+      }
+      ]
+    },
+    {
+      "desc": "vydávání čipových karet (Lítačka)",
+      "services": [
+      {
+        "val": 16,
+        "desc": "příjem žádostí",
+        "broader": "vydávání čipových karet (Lítačka)"
+      },
+      {
+        "val": 32,
+        "desc": "výdej hotových karet",
+        "broader": "vydávání čipových karet (Lítačka)"
+      },
+      {
+        "val": 64,
+        "desc": "expresní místa (možno na počkání)",
+        "broader": "vydávání čipových karet (Lítačka)"
+      }
+      ]
+    },
+    {
+      "desc": "prodej elektronických předplatních kupónů",
+      "services": [
+      {
+        "val": 256,
+        "desc": "na počkání",
+        "broader": "prodej elektronických předplatních kupónů"
+      }
+      ]
+    },
+    {
+      "desc": "prodej papírových předplatních kupónů",
+      "services": [
+      {
+        "val": 4096,
+        "desc": "Praha",
+        "broader": "prodej papírových předplatních kupónů"
+      },
+      {
+        "val": 8192,
+        "desc": "příměsto: BUS+VLAK",
+        "broader": "prodej papírových předplatních kupónů"
+      }
+      ]
+    },
+    {
+      "desc": "prodej jednotlivých jízdenek PID",
+      "services": [
+      {
+        "val": 65536,
+        "desc": "krátkodobé jízdenky pro jednotlivou jízdu",
+        "broader": "prodej jednotlivých jízdenek PID"
+      },
+      {
+        "val": 131072,
+        "desc": "celodenní (příp. třídenní) jízdenky",
+        "broader": "prodej jednotlivých jízdenek PID"
+      }
+      ]
+    },
+    {
+      "desc": "Ověřování průkazek pro žákovské jízdné",
+      "services": [
+      {
+        "val": 1048576,
+        "desc": "na počkání",
+        "broader": "Ověřování průkazek pro žákovské jízdné"
+      }
+      ]
+    },
+    {
+      "desc": "Prodej respirátorů",
+      "services": [
+      {
+        "val": 16777216,
+        "desc": "10 Kč/kus",
+        "broader": "Prodej respirátorů"
+      }
+      ]
+    }
+    ]
+  },
+  {
+  "payMethods": [
+    {
+      "val": 1,
+      "desc": "mince"
+    },
+    {
+      "val": 2,
+      "desc": "bankovky"
+    },
+    {
+      "val": 4,
+      "desc": "bezkontaktní karty"
+    },
+    {
+      "val": 8,
+      "desc": "kontaktní karty"
+    }
+    ]
+  }
+  ]
+}
