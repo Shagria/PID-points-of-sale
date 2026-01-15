@@ -31,14 +31,16 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
   rr:predicate schema:name;
   rr:objectMap [
-    rml:reference "name"
+    rml:reference "name";
+      rr:language "cs"
   ]
 ];
 
 rr:predicateObjectMap [
   rr:predicate schema:address;
   rr:objectMap [
-    rml:reference "address"
+    rml:reference "address";
+      rr:language "cs"
   ]
 ];
 

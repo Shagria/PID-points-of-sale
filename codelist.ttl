@@ -89,6 +89,14 @@
   ] ;
 
   rr:predicateObjectMap [
+    rr:predicate skos:notation ;
+    rr:objectMap [
+      rml:reference "val" ;
+      rr:datatype xsd:integer
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
     rr:predicate skos:prefLabel ;
     rr:objectMap [
       rml:reference "desc" ;
